@@ -7,7 +7,8 @@ const authorization = require('../middleware/authorization');
 
 // --- MULTER CONFIGURATION ---
 const storage = multer.diskStorage({
-    destination: (req, file, cb) => cb(null, 'uploads/'),
+    // path.join(__dirname, '../uploads') points explicitly to backend/uploads
+    destination: (req, file, cb) => cb(null, path.join(__dirname, '../uploads')),
     filename: (req, file, cb) => cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
 });
 
