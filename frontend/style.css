@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    button:hover {
+        background-color: #218838;
+    }
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Dashboard Styles (We will use these later) */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background: #333;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 20px;
+}
+
+    .nav a {
+        color: white;
+        margin-left: 15px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.file-list {
+    list-style: none;
+    padding: 0;
+}
+
+.file-item {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-delete {
+    background: #dc3545;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+.btn-download {
+    background: #007bff;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Secure File Hosting</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Override body center alignment for dashboard */
+        body {
+            display: block;
+            height: auto;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <strong>File Hosting App</strong>
+        <div>
+            <span id="username-display"></span>
+            <a onclick="logout()">Logout</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container" style="width: auto; text-align: left; margin-bottom: 20px;">
+            <h3>Upload New File</h3>
+            <input type="file" id="file-input">
+            <select id="privacy-setting">
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+            </select>
+            <button onclick="uploadFile()" style="width: auto;">Upload</button>
+            <p id="upload-message"></p>
+        </div>
+
+        <h3>My Files</h3>
+        <ul id="my-files-list" class="file-list">
+        </ul>
+
+        <h3>Public Downloads</h3>
+        <ul id="public-files-list" class="file-list">
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // Check if user is logged in immediately
+        if(!localStorage.getItem('token')) {
+            window.location.href = 'index.html';
+        } else {
+            loadDashboard(); // Function inside app.js
+        }
+    </script>
+</body>
+</html>
